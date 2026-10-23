@@ -1,5 +1,7 @@
 # EPP public contracts
 
+[![npm next](https://img.shields.io/npm/v/%40szepp%2Fcontracts/next)](https://www.npmjs.com/package/@szepp/contracts)
+
 Public schemas for EPP mini-program APIs and browser login tickets. MIT licensed.
 
 ```js
