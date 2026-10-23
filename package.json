@@ -1,0 +1,57 @@
+{
+  "name": "@epp/contracts",
+  "packageManager": "pnpm@11.21.0",
+  "version": "0.1.0-rc.2",
+  "description": "Public EPP mini-program and browser-ticket contracts",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./dist/mini-program.js",
+  "types": "./dist/mini-program.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/mini-program.d.ts",
+      "import": "./dist/esm/mini-program.js",
+      "require": "./dist/mini-program.js",
+      "default": "./dist/mini-program.js"
+    },
+    "./mini-program": {
+      "types": "./dist/mini-program.d.ts",
+      "import": "./dist/esm/mini-program.js",
+      "require": "./dist/mini-program.js",
+      "default": "./dist/mini-program.js"
+    },
+    "./fields": {
+      "types": "./dist/fields.d.ts",
+      "import": "./dist/esm/fields.js",
+      "require": "./dist/fields.js",
+      "default": "./dist/fields.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "npm run build && vitest run",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "dependencies": {
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "5.9.3",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamChowRock/epp-contracts.git"
+  }
+}
