@@ -1,5 +1,5 @@
 {
-  "name": "@epp/contracts",
+  "name": "@szepp/contracts",
   "packageManager": "pnpm@11.21.0",
   "version": "0.1.0-rc.2",
   "description": "Public EPP mini-program and browser-ticket contracts",
@@ -32,7 +32,8 @@
   ],
   "scripts": {
     "build": "node build.mjs",
-    "test": "npm run build && vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc -p tests/tsconfig.json",
+    "test": "npm run build && npm run typecheck && vitest run",
     "prepack": "npm run build"
   },
   "engines": {
